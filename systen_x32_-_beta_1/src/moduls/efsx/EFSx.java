@@ -158,7 +158,7 @@ public class EFSx implements Serializable {
 			if(sl.getSession(i, 2).equals("o")){
 				isOpen=true;
 			}
-		}	
+		}
 		
 		return isOpen;
 	}

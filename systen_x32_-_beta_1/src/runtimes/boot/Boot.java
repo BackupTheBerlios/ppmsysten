@@ -13,6 +13,7 @@ import moduls.jcorex32.ecoderx32.ECoder;
 import moduls.jcorex32.lib.SystenLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
+import visual.blvlchooser.BLvlChooser;
 import visual.boot.BootFrm;
 import visual.boot.BootScreen;
 import visual.boot.BootSetup;
@@ -151,6 +152,10 @@ public class Boot {
 				
 				if(isOpen){
 					bf.setTxt("##m"+ci.getTxt("sop")+"##n");
+					
+					Thread.sleep(100);
+					
+					new BLvlChooser().loadBLvlChooser();
 				}
 				else {
 					bf.setTxt("##m"+ci.getTxt("scl")+"##n");
