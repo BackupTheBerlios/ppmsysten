@@ -1,0 +1,40 @@
+
+# WINDOWS OS COMPATIBILITY PART #######################################################
+
+supported=windows_xp%linux%windows_nt_(unknown)%windows_2003
+
+windows_xp=professional%p%home%h
+windows_nt_(unknown)=professional%v
+windows_2003=professional%x
+
+x86p=windows_xp_professional_windows_nt
+x86windows_xp_professional_windows_nt=5.1
+x86windows_xp_professional_windows_nt5.1=Windows_XP_Professional
+x86upp=Service Pack 2oh
+
+x86h=windows_xp_home_windows_nt
+x86windows_xp_home_windows_nt=5.1
+x86windows_xp_home_windows_nt5.1=Windows_XP_Home_Edition
+x86uph=Service Pack 2oh
+
+x86v=windows_professional_windows_nt_(unknown)
+x86windows_professional_windows_nt_(unknown)=6.0
+x86windows_professional_windows_nt_(unknown)6.0=Windows_Vista_(Beta)
+x86upv=
+
+x86x=windows_xp_professional_x64_edition_windows_nt
+x86windows_xp_professional_x64_edition_windows_nt=5.2
+x86windows_xp_professional_x64_edition_windows_nt5.2=Windows_XP_Professional_x64_Edition
+x86upx=Service Pack 1oh
+
+amd64x=windows_xp_professional_x64_edition_windows_nt
+amd64windows_xp_professional_x64_edition_windows_nt=5.2
+amd64windows_xp_professional_x64_edition_windows_nt5.2=Windows_XP_Professional_x64_Edition
+amd64upx=Service Pack 1oh
+
+# LINUX OS COMPATIBILITY PART #######################################################
+
+i386=linux
+i386linux=2.6.11oh
+i386linux2.6.11=Linux
+i386UP=

@@ -1,0 +1,59 @@
+
+bl-1=RAW
+bl0=ZERO
+bl1=ONE
+bl2=TWO
+bldis=DEAKTIVIERT
+
+sop=JA
+scl=NEIN
+
+000=beendet
+
+001=lade ERRORCODES
+
+002=lade CI
+
+003=lade LAUNCHER Prüfung
+
+004=lade BOOTLEVEL
+
+005=lade JAVA Bibliothek
+
+006=lade SYSTEN X32 Bibliothek
+
+007=lade MASTER-OS Bibliothek
+
+008=lade LAUNCHER Prüfung für MASTER-OS
+
+009=master-os:
+
+010=lade master-os PRELOADING
+
+011=lade master-os RESOLUTIONS
+
+012=lade master-os SCHNITTSTELLE
+
+013=lade Bibliothek CHECKSUM
+
+014=lade HYPERTHRONE
+
+015=lade master-os LIBRARY
+
+016=verwendetes master-os:
+
+017=lösche SWP und STARTE
+
+018=loading EFSX file system
+
+019=eFSx BOOTLEVEL:
+
+020=lade efsx BRIDGE
+
+021=lade efsx SESSION check
+
+022=eFSx Status:
+
+023=lade ECODER-X32
+
+024=offene Session(s):

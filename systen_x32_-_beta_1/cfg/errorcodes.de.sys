@@ -1,0 +1,82 @@
+
+0=SHUTDOWN: erfolgreich
+
+-0=RESTART: erfolgreich
+
+-4=BOOT PARAMETER: Adressierungskonflikt
+
+-5=BOOT.SYS: nicht gefunden
+-6=BOOT.SYS: Konflikt festgestellt
+
+-7=ENVIRONMENT.SWP: Konflikt festgestellt
+-8=ENVIRONMENT.SWP: Adressierungskonflikt
+
+-9=RESOLUTION.SYSE: nicht gefunden
+-10=RESOLUTION.SYSE: Konflikt festgestellt
+
+-11=RESOLUTION.SWP: Adressierungskonflikt
+
+-12=WINDOWS INTERFACE: Konflikt festgestellt
+-13=WINDOWS INTERFACE: Adressierungskonflikt
+
+-14=WINDOWS INTERFACE OUTPUT: Konflikt festgestellt
+-15=WINDOWS INTERFACE OUTPUT: Adressierungskonflikt
+
+-16=LAUNCH PARAMETER: Versionskonflikt
+-17=LAUNCH PARAMETER: Konflikt festgestellt (#1)
+-18=LAUNCH PARAMETER: Konflikt festgestellt (#2)
+
+-19=HYPERTHRONE: Konflikt festgestellt (#1)
+-20=HYPERTHRONE: Konflikt festgestellt (#2)
+-21=HYPERTHRONE: Adressierungskonflikt
+
+-22=SYSTEMROOT: Konflikt festgestellt
+
+-23=OS.SYS: nicht gefunden
+-24=OS.SYS: Konflikt festgestellt
+
+-25=MASTER-OS: nicht unterstützt
+-26=MASTER-OS: Konflikt festgestellt
+-27=MASTER-OS: Schnittstellenkonflikt
+
+-28=PROCESSOR: Prüfung fehlgeschlagen
+
+-29=EC.SYS: nicht gefunden
+-30=EC.SYS: Konflikt festgestellt
+
+-31=JAVA: Konflikt detected
+-32=JAVA: Fehler festgestellt
+
+-33=GLOBALTXT.SYS: nicht gefunden
+-34=GLOBALTXT.SYS: Konflikt festgestellt
+
+-35=CI.SYS: nicht gefunden
+-36=CI.SYS: Konflikt festgestellt
+
+-37=BOOTFRM.SYS: nicht gefunden
+-38=BOOTFRM.SYS: Konflikt festgestellt
+
+-39=BOOTLEVEL: unbekannt
+
+-40=ERRORCODEFRM: Konflikt festgestellt
+
+-41=BOOTFRM: Konflikt festgestellt
+
+-42=BOOTEXITFRM: Konflikt festgestellt
+
+-43=TXT.SYS: nicht gefunden
+-44=TXT.SYS: Konflikt festgestellt
+
+-45=ECODER-X32: nicht geladen, beende Operation
+
+-46=INDEX.EFSX: Konflikt festgestellt
+
+-47=ECODER-X32: unbekannter Modus
+-48=ECODER-X32: Fehler beim Decodieren
+
+-49=RUNTIME ERROR: falscher Bootlevel verwendet
+
+-50=EFSX ERROR: Dateisystemfehler, Neustart...
+
+-51=EFSX.SYS: nicht gefunden
+-52=EFSX.SYS: Konflikt festgestellt

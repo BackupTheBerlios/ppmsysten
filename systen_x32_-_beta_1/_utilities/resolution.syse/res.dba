@@ -1,0 +1,27 @@
+remstart
+
+title:      Systen x32 1.0: resolution manager
+
+version:    1.0.0001
+            (c) 2006 Xi soft.
+________________________________________________________________________________________________________ remend
+
+path$=cl$()
+
+if path$="" then end
+
+if file exist (path$+"resolution.swp") then delete file path$+"resolution.swp"
+
+open to write 1, path$+"resolution.swp"
+
+perform checklist for display modes
+
+for i=1 to checklist quantity()
+    write string 1, str$(i)+"="+checklist string$(i)
+next i
+
+write string 1, "number="+str$(i-1)
+
+close file 1
+
+

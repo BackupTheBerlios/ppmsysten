@@ -1,0 +1,81 @@
+
+bl-1=RAW
+bl0=ZERO
+bl1=ONE
+bl2=TWO
+bldis=OFFLINE
+
+sop=YES
+scl=NO
+
+000=done
+
+001=loading ERRORCODES
+
+002=loading CI
+
+003=loading LAUNCHER check
+
+004=loading BOOTLEVEL
+
+005=loading JAVA library
+
+006=loading SYSTEN X32 library
+
+007=loading MASTER-OS library
+
+008=loading LAUNCHER check for MASTER-OS
+
+009=master-os:
+
+010=loading master-os PRELOADING
+
+011=loading master-os RESOLUTIONS
+
+012=loading master-os INTERFACE
+
+013=loading library CHECKSUM
+
+014=loading HYPERTHRONE
+
+015=loading master-os LIBRARY
+
+016=running on master-os:
+
+017=clearing SWP and STARTING
+
+018=loading EFSX file system
+
+019=eFSx BOOTLEVEL:
+
+020=loading efsx BRIDGE
+
+021=loading efsx SESSION check
+
+022=eFSx status:
+
+023=loading ECODER-X32
+
+024=open session(s):
+
+025=allocating JAVA library
+
+026=allocating MASTER-OS
+
+027=allocating MASTER-OS library
+
+028=allocating AURALION library
+
+029=allocating CYRA library
+
+030=allocating HYPERTHRONE library
+
+031=loading | starting AURALION
+
+032=loading | starting CYRA
+
+033=loading | starting HYPERTHRONE
+
+034=loading | starting ENDAVOR
+
+035=loading | starting SYSTEN X32 ...

@@ -1,0 +1,97 @@
+
+0=SHUTDOWN: successfully
+
+-0=RESTART: successfully
+
+-4=BOOT PARAMETER: allocation conflict
+
+-5=BOOT.SYS: not found
+-6=BOOT.SYS: conflict detected
+
+-7=ENVIRONMENT.SWP: conflict detected
+-8=ENVIRONMENT.SWP: allocation conflict
+
+-9=RESOLUTION.SYSE: not found
+-10=RESOLUTION.SYSE: conflict detected
+
+-11=RESOLUTION.SWP: allocation conflict
+
+-12=WINDOWS INTERFACE: conflict detected
+-13=WINDOWS INTERFACE: allocation conflict
+
+-14=WINDOWS INTERFACE OUTPUT: conflict detected
+-15=WINDOWS INTERFACE OUTPUT: allocation conflict
+
+-16=LAUNCH PARAMETER: version conflict
+-17=LAUNCH PARAMETER: conflict detected (#1)
+-18=LAUNCH PARAMETER: conflict detected (#2)
+
+-19=HYPERTHRONE: conflict detected (#1)
+-20=HYPERTHRONE: conflict detected (#2)
+-21=HYPERTHRONE: allocation conflict
+
+-22=SYSTEMROOT: conflict detected
+
+-23=OS.SYS: not found
+-24=OS.SYS: conflict detected
+
+-25=MASTER-OS: not supported
+-26=MASTER-OS: conflict detected
+-27=MASTER-OS: interface conflict
+
+-28=PROCESSOR: check failed
+
+-29=EC.SYS: not found
+-30=EC.SYS: error detected
+
+-31=JAVA: conflict detected
+-32=JAVA: error detected
+
+-33=GLOBALTXT.SYS: not found
+-34=GLOBALTXT.SYS: conflict detected
+
+-35=CI.SYS: not found
+-36=CI.SYS: conflict detected
+
+-37=BOOTFRM.SYS: not found
+-38=BOOTFRM.SYS: conflict detected
+
+-39=BOOTLEVEL: unknown
+
+-40=ERRORCODEFRM: conflict detected
+
+-41=BOOTFRM: conflict detected
+
+-42=BOOTEXITFRM: conflict detected
+
+-43=TXT.SYS: not found
+-44=TXT.SYS: conflict detected
+
+-45=ECODER-X32: not loaded, unable to code / decode
+
+-46=INDEX.EFSX: conflict detected
+
+-47=ECODER-X32: unknown modus
+-48=ECODER-X32: error while decode process
+
+-49=RUNTIME ERROR: program may performe wrong bootlevel
+
+-50=EFSX ERROR: file system error, restarting...
+
+-51=EFSX.SYS: not found
+-52=EFSX.SYS: conflict detected
+
+-53=AURALION.SYS: not found
+-54=AURALION.SYS: conflict detected
+
+-55=CYRA.SYS: not found
+-56=CYRA.SYS: conflict detected
+
+-57=HYPERTHRONE.SYS: not found
+-58=HYPERTHRONE.SYS: conflict detected
+
+-59=ENDAVOR.SYS: not found
+-60=ENDAVOR.SYS: conflict detected
+
+-61=DESKTOP.SYS: not found
+-62=DESKTOP.SYS: conflict detected
