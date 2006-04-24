@@ -96,5 +96,8 @@
 -61=DESKTOP.SYS: not found
 -62=DESKTOP.SYS: conflict detected
 
--63=BLVL.EN.SYS: not found
--64=BLVL.EN.SYS: conflict detected
+-63=SNS.EN.SYS: not found
+-64=SNS.EN.SYS: conflict detected
+
+-65=BOOTSTP.EN.SYS: not found
+-66=BOOTSTP.EN.SYS: conflict detected

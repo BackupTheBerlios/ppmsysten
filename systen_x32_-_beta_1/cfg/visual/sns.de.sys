@@ -1,5 +1,5 @@
 
-name=Systen_x32_(BOOTLEVEL-CHOOSER)
+name=Systen_x32_(SESSION-CHOOSER)
 
 xloc=160
 yloc=140
@@ -14,15 +14,15 @@ lstyloc=25
 lstxsiz=300
 lstysiz=140
 
-title=please choose a session:
+title=Session wählen:
 
-txpos=10
-typos=15
+txpos=15
+typos=20
 
-btnename=close
+btnename=abbruch
 btnexpos=120
 btneypos=170
 
-btnaname=accept
+btnaname=weiter
 btnaxpos=220
 btnaypos=170

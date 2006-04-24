@@ -96,5 +96,8 @@
 -61=DESKTOP.SYS: nicht gefunden
 -62=DESKTOP.SYS: Konflikt festgestellt
 
--63=BLVL.EN.SYS: nicht gefunden
--64=BLVL.EN.SYS: Konflikt festgestellt
+-63=SNS.DE.SYS: nicht gefunden
+-64=SNS.DE.SYS: Konflikt festgestellt
+
+-65=BOOTSTP.DE.SYS: nicht gefunden
+-66=BOOTSTP.DE.SYS: Konflikt festgestellt

@@ -13,10 +13,10 @@ import moduls.jcorex32.ecoderx32.ECoder;
 import moduls.jcorex32.lib.SystenLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
-import visual.blvlchooser.BLvlChooser;
 import visual.boot.BootFrm;
 import visual.boot.BootScreen;
 import visual.boot.BootSetup;
+import visual.efsx.OpenDlg;
 
 public class Boot {
 	
@@ -38,7 +38,9 @@ public class Boot {
 			
 			Thread bst=new Thread(bs);
 			
-			while(!resume){
+			new Prestart().setPrestart();
+			
+			while(!resume){				
 				bs.loadBootScreen();
 				
 				bst.start();
@@ -59,7 +61,9 @@ public class Boot {
 				}
 			}
 			
-			// Methode vordefinierten START
+			new Prestart().setPrestart();
+			
+			System.exit(0);
 			
 			Thread.sleep(750);
 			
@@ -155,13 +159,15 @@ public class Boot {
 					
 					Thread.sleep(100);
 					
-					new BLvlChooser().loadBLvlChooser();
+					new OpenDlg().loadOpenDlg();
 				}
 				else {
 					bf.setTxt("##m"+ci.getTxt("scl")+"##n");
 				}
 				
 				Thread.sleep(500);
+				
+//				System.exit(0);
 			}
 			else if(sl.getBootLvl()==-1){
 				sl.setTmpPath(System.getProperty("java.io.tmpdir"));

@@ -56,7 +56,7 @@ public class ErrorCodeFrm extends JDialog implements KeyListener, MouseListener 
 				}				
 			}
 			
-			mt.addImage(back, 0);			
+			mt.addImage(back, 0);
 			mt.waitForID(0);
 			
 			setTitle(title);

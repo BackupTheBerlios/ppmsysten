@@ -33,7 +33,7 @@ public class SystenLib {
 	
 	private static String[] endavor=new String[2];
 	
-	private static int bootLvl=1;
+	private static int bootLvl=0;
 	
 	private static int errorLvl=0;
 	
@@ -181,7 +181,12 @@ public class SystenLib {
 	}
 	
 	public void initSession(int x){
-		session.add(Integer.toString(x));
+		if(session.isEmpty()){
+			session.add(Integer.toString(x));
+		}
+		else {
+			session.set(0, Integer.toString(x));
+		}
 	}
 	
 	public void setSession(String x, String y, String z){

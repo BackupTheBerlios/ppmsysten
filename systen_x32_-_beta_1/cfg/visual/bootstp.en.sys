@@ -1,0 +1,11 @@
+
+name=Systen_x32_(BOOTSETUP)
+
+xloc=0
+yloc=0
+xsiz=640
+ysiz=480
+
+btnaname=accept
+btnaxpos=540
+btnaypos=450

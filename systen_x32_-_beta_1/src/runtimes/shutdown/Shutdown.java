@@ -49,6 +49,18 @@ public class Shutdown {
 		catch(IOException ioe){
 		}
 		
+		try {
+			if(sl.getOsType()==0){
+				Runtime.getRuntime().exec("cmd.exe /c del efsx\\"+sl.getCurSession(0)+"*.*");
+			}
+			else {
+				// LINUX delete
+			}
+		}
+		catch(IOException ioe){
+			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("0"), 0);
+		}
+		
 		System.exit(code);
 	}
 	
@@ -75,7 +87,7 @@ public class Shutdown {
 				objOut.writeObject(e.performe(sl.getSession(i, 0), 0, "stdsx32"));				
 				objOut.writeObject(e.performe(sl.getSession(i, 1), 0, "stdsx32"));					
 				objOut.writeObject(e.performe(sl.getSession(i, 2), 0, "stdsx32"));
-			}	
+			}
 			
 			objOut.close();
 		}
@@ -89,6 +101,13 @@ public class Shutdown {
 		}
 		
 		try {
+			if(sl.getOsType()==0){
+				Runtime.getRuntime().exec("cmd.exe /c del efsx\\"+sl.getCurSession(0)+"*.*");
+			}
+			else {
+				// LINUX delete
+			}
+			
 			Runtime.getRuntime().exec(sl.getLaParam3()+" "+sl.getLaParam1()+" "+sl.getLaParam2()+" "+sl.getLaParam3());
 		}
 		catch(IOException ioe){

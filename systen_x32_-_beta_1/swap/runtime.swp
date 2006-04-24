@@ -2,8 +2,8 @@
 System Information
 ------------------
 Time of this report: 4/23/2006, 16:46:15
-       Machine name: SYSTEN-64-01
-   Operating System: Windows XP Professional x64 Edition (5.2, Build 3790) Service Pack 1 (3790.srv03_sp1_rtm.050324-1447)
+       Machine name: DT6403
+   Operating System: Windows XP Professional (5.1, Build 3790) Service Pack 2 (3790.srv03_sp1_rtm.050324-1447)
            Language: English (Regional Setting: German)
 System Manufacturer: MSI
        System Model: MS-6702
@@ -46,7 +46,7 @@ Display Devices
          DAC type: Internal DAC(400MHz)
        Device Key: Enum\PCI\VEN_1002&DEV_4A50&SUBSYS_00021002&REV_00
    Display Memory: 256.0 MB
-     Current Mode: 1280 x 1024 (32 bit) (75Hz)
+     Current Mode: 1280 x 800 (32 bit) (75Hz)
           Monitor: Plug and Play Monitor
   Monitor Max Res: 1600,1200
       Driver Name: ati2dvag.dll

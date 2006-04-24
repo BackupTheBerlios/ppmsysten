@@ -23,8 +23,6 @@ public class BootOne {
 		JavaLib		jl=new JavaLib();
 		SystenLib	sl=new SystenLib();
 		
-		sl.setCurSession("01dnoo", "");				// zeile nur zur entwicklungszwecken - session muss existieren
-		
 		try {
 			jl.setOsName("");
 			

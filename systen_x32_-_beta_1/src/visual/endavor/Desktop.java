@@ -67,10 +67,10 @@ public class Desktop extends JFrame implements MouseListener {
 	
 	public void mouseClicked(MouseEvent mouse){
 		setVisible(false);
-			
+		
 		dispose();
 		
-		System.exit(0);
+		new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("0"), 0);
 	}
 
 	public void mousePressed(MouseEvent mouse){}

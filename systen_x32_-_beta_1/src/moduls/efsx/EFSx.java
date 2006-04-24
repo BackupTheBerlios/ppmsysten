@@ -121,7 +121,7 @@ public class EFSx implements Serializable {
 						
 					objOut.close();
 				}
-			}								
+			}
 		}
 		catch(IOException ioe){
 			l.log(this.getClass().getName(), new ErrorCode().getErrorCode("-46"), -46);
@@ -161,5 +161,32 @@ public class EFSx implements Serializable {
 		}
 		
 		return isOpen;
+	}
+	
+	public void clearSns(String sns, String time){
+		ECoder	e=new ECoder();
+		Log		l=new Log();
+		
+		try {
+			sl.initSession(sl.getSessionNumber()-1);
+			
+			sl.setCurSession(sns, time);
+			
+			ObjectOutputStream objOut=objOut=new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(sl.getEFSxSource())));
+				
+			objOut.writeObject(new ECoder().performe(Integer.toString(sl.getSessionNumber()), 0, "stdsx32"));
+					
+			for(int i=0; i<sl.getSessionNumber(); i++){
+				objOut.writeObject(e.performe(sl.getSession(i, 0), 0, "stdsx32"));				
+				objOut.writeObject(e.performe(sl.getSession(i, 1), 0, "stdsx32"));					
+				objOut.writeObject(e.performe(sl.getSession(i, 2), 0, "stdsx32"));
+			}
+					
+			objOut.close();
+		}
+		catch(IOException ioe){
+			l.log(this.getClass().getName(), new ErrorCode().getErrorCode("-46"), -46);
+		}
+		catch(NullPointerException npe){}
 	}
 }
