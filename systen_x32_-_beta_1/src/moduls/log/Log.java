@@ -17,7 +17,7 @@ public class Log {
 		
 		sl.setErrorLvl(code);
 		
-		sl.setCurSessionClose();
+		sl.setCurSessionClose(true);
 		
 		new ErrorCodeFrm().ECFError(message);		
 

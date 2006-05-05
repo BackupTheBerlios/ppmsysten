@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class SystenLib {
 	
+	private static ArrayList settings=new ArrayList();
+	
 	private static int osType=0;
 	
 	private static String laParam1="";
@@ -170,6 +172,14 @@ public class SystenLib {
 		return osType;
 	}
 	
+	public ArrayList getSettings(){
+		return settings;
+	}
+	
+	public void setSettings(ArrayList x){
+		settings=x;
+	}
+	
 	public void setOsType(int x){
 		osType=x;
 	}
@@ -194,8 +204,8 @@ public class SystenLib {
 		eFSx[x]=y;
 	}
 	
-	public void setCurSessionClose(){
-		curSessionClose=true;
+	public void setCurSessionClose(boolean x){
+		curSessionClose=x;
 	}
 	
 	public void changeSession(int x, int y, String z){

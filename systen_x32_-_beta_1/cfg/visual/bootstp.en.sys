@@ -3,8 +3,8 @@ name=Systen_x32_(BOOTSETUP)
 
 xloc=0
 yloc=0
-xsiz=640
-ysiz=480
+xsiz=600
+ysiz=250
 
 font=Arial
 fsize=14
@@ -15,45 +15,179 @@ xtloc=15
 ytloc=20
 
 btnaname=accept
-btnaxpos=540
-btnaypos=450
+btnaxpos=500
+btnaypos=220
 
 btnasname=save
-btnasxpos=445
-btnasypos=450
+btnasxpos=395
+btnasypos=220
+
+btndefname=default
+btndefxpos=300
+btndefypos=220
 
 btnename=exit
-btnexpos=350
-btneypos=450
+btnexpos=205
+btneypos=220
 
 mdlsxpos=15
 mdlsypos=40
 
-mdlsxsiz=210
-mdlsysiz=280
+mdlsxsiz=230
+mdlsysiz=170
 
-mdlstxt=modules to load / not to load:
+mdlstxt=loading following modules:
 
 mdlsAurxpos=20
 mdlsAurypos=80
 
-mdlsAurxsiz=200
+mdlsAurxsiz=220
 mdlsAurysiz=20
 
 mdlsAurtxt=Auralion (sound-interface)
 
-mdlsEcxpos=20
-mdlsEcypos=100
+mdlsCyxpos=20
+mdlsCyypos=100
 
-mdlsEcxsiz=200
+mdlsCyxsiz=220
+mdlsCyysiz=20
+
+mdlsCytxt=Cyra (network-interface)
+
+mdlsEcxpos=20
+mdlsEcypos=120
+
+mdlsEcxsiz=220
 mdlsEcysiz=20
 
 mdlsEctxt=eCoder-x32 (coder / decoder)
 
 mdlsEfsxxpos=20
-mdlsEfsxypos=120
+mdlsEfsxypos=140
 
-mdlsEfsxxsiz=190
+mdlsEfsxxsiz=220
 mdlsEfsxysiz=20
 
 mdlsEfsxtxt=eFSx (file-system)
+
+mdlsEndxpos=20
+mdlsEndypos=160
+
+mdlsEndxsiz=220
+mdlsEndysiz=20
+
+mdlsEndtxt=Endavor (desktop-system)
+
+mdlsHTexpos=20
+mdlsHTeypos=180
+
+mdlsHTexsiz=220
+mdlsHTeysiz=20
+
+mdlsHTetxt=HyperTHRONE (graphic-interface)
+
+snsxpos=260
+snsypos=40
+
+snsxsiz=150
+snsysiz=70
+
+snstxt=show session prompt:
+
+snsYesxpos=270
+snsYesypos=80
+
+snsYesxsiz=50
+snsYesysiz=20
+
+snsYestxt=yes
+
+snsNoxpos=340
+snsNoypos=80
+
+snsNoxsiz=50
+snsNoysiz=20
+
+snsNotxt=no
+
+snsCxpos=420
+snsCypos=40
+
+snsCxsiz=160
+snsCysiz=70
+
+snsCtxt=disable session closing:
+
+snsCYesxpos=430
+snsCYesypos=80
+
+snsCYesxsiz=50
+snsCYesysiz=20
+
+snsCYestxt=yes
+
+snsCNoxpos=500
+snsCNoypos=80
+
+snsCNoxsiz=50
+snsCNoysiz=20
+
+snsCNotxt=no
+
+blxpos=260
+blypos=130
+
+blxsiz=150
+blysiz=70
+
+bltxt=bootlevel:
+
+blRawxpos=270
+blRawypos=170
+
+blRawxsiz=60
+blRawysiz=20
+
+blRawtxt=RAW
+
+blZeroxpos=340
+blZeroypos=170
+
+blZeroxsiz=60
+blZeroysiz=20
+
+blZerotxt=ZERO
+
+lngxpos=420
+lngypos=130
+
+lngxsiz=160
+lngysiz=70
+
+lngtxt=language:
+
+lngExpos=430
+lngEypos=170
+
+lngExsiz=75
+lngEysiz=20
+
+lngEtxt=english
+
+lngGxpos=505
+lngGypos=170
+
+lngGxsiz=75
+lngGysiz=20
+
+lngGtxt=german
+
+msgxpos=15
+msgypos=220
+
+msgxsiz=180
+msgysiz=20
+
+msgDeftxt=loaded
+msgSavtxt=saved
+msgTxt=

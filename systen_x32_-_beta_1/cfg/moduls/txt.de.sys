@@ -44,16 +44,38 @@ scl=NEIN
 
 017=lösche SWP und STARTE
 
-018=loading EFSX file system
+018=lade EFSX Dateisystem
 
 019=eFSx BOOTLEVEL:
 
 020=lade efsx BRIDGE
 
-021=lade efsx SESSION check
+021=lade efsx SESSION Prüfung
 
 022=eFSx Status:
 
 023=lade ECODER-X32
 
 024=offene Session(s):
+
+025=erzeuge JAVA Bibliothek
+
+026=erzeuge MASTER-OS
+
+027=erzeuge MASTER-OS Bibliothek
+
+028=erzeuge AURALION Bibliothek
+
+029=erzeuge CYRA Bibliothek
+
+030=erzeuge HYPERTHRONE Bibliothek
+
+031=lade | starte AURALION
+
+032=lade | starte CYRA
+
+033=lade | starte HYPERTHRONE
+
+034=lade | starte ENDAVOR
+
+035=lade | starte SYSTEN X32 ...
