@@ -34,6 +34,15 @@ public class Desktop extends JFrame implements MouseListener {
 	public void loadDesktop(){
 		SystenLib sl=new SystenLib();
 		
+		if((new SystenLib().getHyperTHRONE(0).equals("n/a"))||
+				(new SystenLib().getHyperTHRONE(1).equals("n/a"))||
+				(new SystenLib().getEndavor(0).equals("n/a"))||
+				(new SystenLib().getEndavor(1).equals("n/a"))){
+			
+			// CI operation-console: not implemented now				
+			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-68"), -68);
+		}
+		
 		setTitle(getParameter("name"));
 		setLocation(Integer.parseInt(getParameter("xloc")), Integer.parseInt(getParameter("yloc")));
 		
@@ -100,7 +109,7 @@ public class Desktop extends JFrame implements MouseListener {
 			txt=txt.replace("§", new SystenLib().getCyra(1));
 			txt=txt.replace("%", new SystenLib().getEFSx(1));
 			txt=txt.replace("&", new SystenLib().getEndavor(1));			
-			txt=txt.replace("/", new SystenLib().getCi(1));
+			txt=txt.replace("?", new SystenLib().getCi(1));
 			txt=txt.replace("=", new SystenLib().getEc(1));
 			
 			double lx=x*(Integer.parseInt(getParameter("devxloc"))/100.0);			

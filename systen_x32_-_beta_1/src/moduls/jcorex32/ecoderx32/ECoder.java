@@ -39,8 +39,8 @@ public class ECoder {
 	public String performe(String code, int type, String modus){
 		String str="";
 		
-		if((sl.getEc(0)==null)||(sl.getEc(1)==null)){
-			l.log(this.getClass().getName(), new ErrorCode().getErrorCode("-45"));
+		if((sl.getEc(0).equals("n/a"))||(sl.getEc(1).equals("n/a"))){
+			l.log(this.getClass().getName(), new ErrorCode().getErrorCode("-45"), -45);
 			
 			return "";
 		}

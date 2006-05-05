@@ -19,6 +19,12 @@ public class Endavor {
 		SystenLib	sl=new SystenLib();
 		
 		try {
+			if((sl.getHyperTHRONE(0).equals("n/a"))||(sl.getHyperTHRONE(1).equals("n/a"))){
+				new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-67"));
+				
+				return;
+			}
+			
 			EF.load(new FileInputStream("cfg/moduls/endavor.sys"));
 			
 			sl.setEndavor(0, EF.getProperty("name"));

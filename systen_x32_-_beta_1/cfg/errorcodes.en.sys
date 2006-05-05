@@ -101,3 +101,11 @@
 
 -65=BOOTSTP.EN.SYS: not found
 -66=BOOTSTP.EN.SYS: conflict detected
+
+-67=HYPERTHRONE: not loaded, unable to resume
+
+-68=RUNTIME-MESSAGE: not implemented
+
+-69=CI: not loaded, unable to resume
+
+-70=EFSX: not loaded, unable to resume

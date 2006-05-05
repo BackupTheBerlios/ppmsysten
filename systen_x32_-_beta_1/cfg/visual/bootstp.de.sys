@@ -6,6 +6,22 @@ yloc=0
 xsiz=640
 ysiz=480
 
-btnaname=weiter
+font=Arial
+fsize=14
+
+text=Systen x32 (BOOTSETUP) | (c) 2006 Xi soft.
+
+xtloc=15
+ytloc=20
+
+btnaname=accept
 btnaxpos=540
 btnaypos=450
+
+btnasname=save
+btnasxpos=445
+btnasypos=450
+
+btnename=exit
+btnexpos=350
+btneypos=450

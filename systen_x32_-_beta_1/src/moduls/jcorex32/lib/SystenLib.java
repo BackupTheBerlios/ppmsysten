@@ -72,7 +72,12 @@ public class SystenLib {
 	}
 	
 	public String getCi(int x){
-		return ci[x];
+		if(ci[x]==null){
+			return "n/a";
+		}
+		else {
+			return ci[x];
+		}
 	}
 	
 	public int getBootLvl(){
@@ -84,7 +89,12 @@ public class SystenLib {
 	}
 	
 	public String getEc(int x){
-		return ec[x];
+		if(ec[x]==null){
+			return "n/a";
+		}
+		else {
+			return ec[x];
+		}
 	}
 	
 	public String getSession(int x, int y){
@@ -112,23 +122,48 @@ public class SystenLib {
 	}
 	
 	public String getEFSx(int x){
-		return eFSx[x];
+		if(eFSx[x]==null){
+			return "n/a";
+		}
+		else {
+			return eFSx[x];
+		}
 	}
 	
 	public String getAuralion(int x){
-		return auralion[x];
+		if(auralion[x]==null){
+			return "n/a";
+		}
+		else {
+			return auralion[x];
+		}
 	}
 	
 	public String getCyra(int x){
-		return cyra[x];
+		if(cyra[x]==null){
+			return "n/a";
+		}
+		else {
+			return cyra[x];
+		}
 	}
 	
 	public String getHyperTHRONE(int x){
-		return hyperTHRONE[x];
+		if(hyperTHRONE[x]==null){
+			return "n/a";
+		}
+		else {
+			return hyperTHRONE[x];
+		}
 	}
 	
 	public String getEndavor(int x){
-		return endavor[x];
+		if(endavor[x]==null){
+			return "n/a";
+		}
+		else {
+			return endavor[x];
+		}
 	}
 	
 	public int getOsType(){

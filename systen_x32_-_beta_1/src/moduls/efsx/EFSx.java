@@ -35,6 +35,10 @@ public class EFSx implements Serializable {
 		boolean 	isError=false;		
 		
 		try {
+			if((sl.getEc(0).equals("n/a"))||(sl.getEc(1).equals("n/a"))){
+				new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-45"), -45);
+			}
+			
 			FS.load(new FileInputStream("cfg/moduls/efsx.sys"));
 				
 			sl.setEFSx(0, FS.getProperty("name"));
@@ -135,6 +139,12 @@ public class EFSx implements Serializable {
 	public String createSID(){
 		String str="";
 		
+		if((new SystenLib().getEFSx(0).equals("n/a"))||(new SystenLib().getEFSx(1).equals("n/a"))){
+			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-70"), -70);
+			
+			return "";
+		}
+		
 		for(int i=0; i<4; i++){
 			int a=(int)(Math.random()*100)+48;
 			
@@ -154,6 +164,12 @@ public class EFSx implements Serializable {
 	public boolean checkSession(){
 		boolean isOpen=false;
 		
+		if((new SystenLib().getEFSx(0).equals("n/a"))||(new SystenLib().getEFSx(1).equals("n/a"))){
+			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-70"), -70);
+			
+			return false;
+		}
+		
 		for(int i=0; i<sl.getSessionNumber()-1; i++){
 			if(sl.getSession(i, 2).equals("o")){
 				isOpen=true;
@@ -168,6 +184,12 @@ public class EFSx implements Serializable {
 		Log		l=new Log();
 		
 		try {
+			if((new SystenLib().getEFSx(0).equals("n/a"))||(new SystenLib().getEFSx(1).equals("n/a"))){
+				new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-70"), -70);
+				
+				return;
+			}
+			
 			sl.initSession(sl.getSessionNumber()-1);
 			
 			sl.setCurSession(sns, time);

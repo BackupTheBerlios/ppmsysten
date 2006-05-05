@@ -6,6 +6,54 @@ yloc=0
 xsiz=640
 ysiz=480
 
+font=Arial
+fsize=14
+
+text=Systen x32 (BOOTSETUP) | (c) 2006 Xi soft.
+
+xtloc=15
+ytloc=20
+
 btnaname=accept
 btnaxpos=540
 btnaypos=450
+
+btnasname=save
+btnasxpos=445
+btnasypos=450
+
+btnename=exit
+btnexpos=350
+btneypos=450
+
+mdlsxpos=15
+mdlsypos=40
+
+mdlsxsiz=210
+mdlsysiz=280
+
+mdlstxt=modules to load / not to load:
+
+mdlsAurxpos=20
+mdlsAurypos=80
+
+mdlsAurxsiz=200
+mdlsAurysiz=20
+
+mdlsAurtxt=Auralion (sound-interface)
+
+mdlsEcxpos=20
+mdlsEcypos=100
+
+mdlsEcxsiz=200
+mdlsEcysiz=20
+
+mdlsEctxt=eCoder-x32 (coder / decoder)
+
+mdlsEfsxxpos=20
+mdlsEfsxypos=120
+
+mdlsEfsxxsiz=190
+mdlsEfsxysiz=20
+
+mdlsEfsxtxt=eFSx (file-system)

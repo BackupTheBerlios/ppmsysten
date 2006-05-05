@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import runtimes.shutdown.Shutdown;
+
 import moduls.jcorex32.lib.SystenLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
@@ -37,6 +39,10 @@ public class Ci {
 		Properties GM=new Properties();		
 		
 		try {
+			if((new SystenLib().getCi(0).equals("n/a"))||(new SystenLib().getCi(1).equals("n/a"))){
+				new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-69"), -69);
+			}
+			
 			GM.load(new FileInputStream("cfg/moduls/globaltxt.sys"));
 			
 			return GM.getProperty(Integer.toString(mod));
@@ -55,6 +61,10 @@ public class Ci {
 		Properties TX=new Properties();		
 		
 		try {
+			if((new SystenLib().getCi(0).equals("n/a"))||(new SystenLib().getCi(1).equals("n/a"))){
+				new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-69"), -69);
+			}
+			
 			TX.load(new FileInputStream("cfg/moduls/txt"+new SystenLib().getLng()+".sys"));
 			
 			return TX.getProperty(mod);

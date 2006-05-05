@@ -101,3 +101,11 @@
 
 -65=BOOTSTP.DE.SYS: nicht gefunden
 -66=BOOTSTP.DE.SYS: Konflikt festgestellt
+
+-67=HYPERTHRONE: nicht geladen, beende Operation
+
+-68=RUNTIME-MESSAGE: nicht implementiert
+
+-69=CI: nicht geladen, beende Operation
+
+-70=EFSX: nicht geladen, beende Operation

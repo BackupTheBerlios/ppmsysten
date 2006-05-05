@@ -56,7 +56,7 @@ public class CmdWinProp extends Thread {
 			
 			RandomAccessFile file=new RandomAccessFile(sl.getTmpPath().replace("\\", "/")+"environment.swp", "r");
 
-			mwl.setSystemDrive(file.readLine());
+			mwl.setSystemDrive(file.readLine());			
 			mwl.setHomeDrive(file.readLine());
 			mwl.setSystemRoot(file.readLine());
 			mwl.setTemp(file.readLine());

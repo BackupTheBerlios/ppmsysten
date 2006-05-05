@@ -15,8 +15,8 @@ public class ECCode {
 		long[] 		code=new long[txt.length()];
 		long 		j=1, l=1;
 		
-		if((sl.getEc(0)==null)||(sl.getEc(1)==null)){
-			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-45"));
+		if((sl.getEc(0).equals("n/a"))||(sl.getEc(1).equals("n/a"))){
+			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-45"), -45);
 			
 			return "";
 		}

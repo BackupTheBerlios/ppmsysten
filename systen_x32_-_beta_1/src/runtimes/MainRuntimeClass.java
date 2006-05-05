@@ -1,6 +1,8 @@
 
 package runtimes;
 
+import moduls.jcorex32.lib.SystenLib;
+import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
 import org.apache.log4j.PropertyConfigurator;

@@ -38,9 +38,9 @@ public class Boot {
 			
 			Thread bst=new Thread(bs);
 			
-			new Prestart().setPrestart();
-			
-			while(!resume){				
+			new Prestart().setPrestart(0);
+		
+/*			while(!resume){				
 				bs.loadBootScreen();
 				
 				bst.start();
@@ -48,11 +48,11 @@ public class Boot {
 				bst.join();
 				
 				if(bootSetup){
-					bst.interrupt();
+					bst.interrupt();*/
 					
 					new BootSetup().loadBootSetup();
 					
-					bst=new Thread(bs);
+/*					bst=new Thread(bs);
 				}
 				else if(!resume){
 					bs.dispose();
@@ -61,11 +61,9 @@ public class Boot {
 				}
 			}
 			
-			new Prestart().setPrestart();
+			Thread.sleep(750);*/
 			
 			System.exit(0);
-			
-			Thread.sleep(750);
 			
 			new ErrorCode().loadErrorCode();
 			
