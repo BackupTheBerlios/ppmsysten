@@ -8,12 +8,12 @@ import java.util.GregorianCalendar;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+import moduls.jcorex32.lib.AuralionLib;
+import moduls.jcorex32.lib.CyraLib;
+import moduls.jcorex32.lib.HyperTHRONELib;
 import moduls.jcorex32.lib.JavaLib;
+import moduls.jcorex32.lib.MasterOSLib;
 import moduls.jcorex32.lib.SystenLib;
-import moduls.jcorex32.lib.windows.AuralionWinLib;
-import moduls.jcorex32.lib.windows.CyraWinLib;
-import moduls.jcorex32.lib.windows.HyperTHRONEWinLib;
-import moduls.jcorex32.lib.windows.MainWinLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
@@ -21,11 +21,11 @@ public class MasterOsWinProp extends Thread {
 	
 	public void run(){
 		Log					l=new Log();
-		MainWinLib 			mwl=new MainWinLib();
+		MasterOSLib 			mwl=new MasterOSLib();
 		SystenLib			sl=new SystenLib();
-		AuralionWinLib		awl=new AuralionWinLib();
-		CyraWinLib			cwl=new CyraWinLib();
-		HyperTHRONEWinLib	htwl=new HyperTHRONEWinLib();
+		AuralionLib		awl=new AuralionLib();
+		CyraLib			cwl=new CyraLib();
+		HyperTHRONELib	htwl=new HyperTHRONELib();
 		
 /*		try {
 			long time=new GregorianCalendar().getTime().getTime();

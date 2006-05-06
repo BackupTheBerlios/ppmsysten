@@ -5,8 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
+import moduls.jcorex32.lib.MasterOSLib;
 import moduls.jcorex32.lib.SystenLib;
-import moduls.jcorex32.lib.windows.MainWinLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
@@ -15,7 +15,7 @@ public class CmdWinProp extends Thread {
 	public void run(){
 		Log			l=new Log();
 		SystenLib	sl=new SystenLib();
-		MainWinLib 	mwl=new MainWinLib();
+		MasterOSLib 	mwl=new MasterOSLib();
 		
 		try {			
 /*			Process process=Runtime.getRuntime().exec("cmd.exe /c echo %SYSTEMDRIVE%> "+sl.getTmpPath()+"environment.swp");			

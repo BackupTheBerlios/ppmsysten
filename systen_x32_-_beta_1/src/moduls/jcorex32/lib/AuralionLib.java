@@ -1,5 +1,5 @@
 
-package moduls.jcorex32.lib.windows;
+package moduls.jcorex32.lib;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -13,11 +13,10 @@ import java.io.ObjectOutputStream;
 import runtimes.shutdown.Shutdown;
 
 import moduls.jcorex32.ecoderx32.ECoder;
-import moduls.jcorex32.lib.SystenLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
-public class AuralionWinLib {
+public class AuralionLib {
 	
 	private static String cardNumber="";
 

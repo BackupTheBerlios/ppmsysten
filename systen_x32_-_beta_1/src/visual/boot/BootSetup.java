@@ -93,6 +93,60 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		getContentPane().setLayout(null);
 		
 		initComponents();
+
+		jbtnAccept.addKeyListener(this);
+		jbtnAccept.addMouseListener(this);
+
+		jbtnAcSave.addKeyListener(this);
+		jbtnAcSave.addMouseListener(this);
+
+		jbtnExit.addKeyListener(this);
+		jbtnExit.addMouseListener(this);
+
+		jbtnDefault.addKeyListener(this);
+		jbtnDefault.addMouseListener(this);
+		
+		jchkbxAuralion.addKeyListener(this);
+		jchkbxAuralion.addMouseListener(this);
+
+		jchkbxCyra.addKeyListener(this);
+		jchkbxCyra.addMouseListener(this);
+		
+		jchkbxECoder.addKeyListener(this);
+		jchkbxECoder.addMouseListener(this);
+		
+		jchkbxEFSx.addKeyListener(this);
+		jchkbxEFSx.addMouseListener(this);
+
+		jchkbxEndavor.addKeyListener(this);
+		jchkbxEndavor.addMouseListener(this);
+		
+		jchkbxHyperTHRONE.addKeyListener(this);
+		jchkbxHyperTHRONE.addMouseListener(this);
+		
+		jrbtnSnsYes.addKeyListener(this);
+		jrbtnSnsYes.addMouseListener(this);
+		
+		jrbtnSnsNo.addKeyListener(this);
+		jrbtnSnsNo.addMouseListener(this);
+		
+		jrbtnSnsCYes.addKeyListener(this);
+		jrbtnSnsCYes.addMouseListener(this);
+
+		jrbtnSnsCNo.addKeyListener(this);
+		jrbtnSnsCNo.addMouseListener(this);
+
+		jrbtnBlRaw.addKeyListener(this);
+		jrbtnBlRaw.addMouseListener(this);
+
+		jrbtnBlZero.addKeyListener(this);
+		jrbtnBlZero.addMouseListener(this);
+		
+		jrbtnLngE.addKeyListener(this);
+		jrbtnLngE.addMouseListener(this);
+		
+		jrbtnLngG.addKeyListener(this);
+		jrbtnLngG.addMouseListener(this);
 		
 		getContentPane().add(jbtnAccept);
 		getContentPane().add(jbtnExit);
@@ -129,29 +183,250 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 			
 			dispose();
 		}
-		if((key.getSource().equals(jbtnAcSave))&&(key.getKeyCode()==KeyEvent.VK_ENTER)){
-			new Prestart().setPrestart(1);
+		else if((key.getSource().equals(jbtnDefault))&&(key.getKeyCode()==KeyEvent.VK_ENTER)){
+			new Prestart().setPrestart(0);
+			
+			getCfg();
+			
+			msg="msgDeftxt";
+			
+			initComponents();
 			
 			repaint();
 		}
-		if((key.getSource().equals(jbtnAccept))&&(key.getKeyCode()==KeyEvent.VK_ENTER)){
-			new Prestart().setPrestart(1);
+		else if((key.getSource().equals(jbtnAcSave))&&(key.getKeyCode()==KeyEvent.VK_ENTER)){
+			putCfg();
 			
+			new Prestart().setPrestart(2);
+			
+			msg="msgSavtxt";
+			
+			initComponents();
+			
+			repaint();
+		}
+		else if((key.getSource().equals(jbtnAccept))&&(key.getKeyCode()==KeyEvent.VK_ENTER)){
+			putCfg();
+
 			setVisible(false);
 			
 			dispose();
 		}
 		else if((key.getSource().equals(jbtnExit))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
-			jbtnAcSave.requestFocus();
+			jbtnDefault.requestFocus();
 		}
 		else if((key.getSource().equals(jbtnAccept))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
 			jbtnAcSave.requestFocus();
 		}
 		else if((key.getSource().equals(jbtnAcSave))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
-			jbtnExit.requestFocus();
+			jbtnDefault.requestFocus();
 		}
 		else if((key.getSource().equals(jbtnAcSave))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
 			jbtnAccept.requestFocus();
+		}
+		else if((key.getSource().equals(jbtnDefault))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
+			jbtnExit.requestFocus();
+		}
+		else if((key.getSource().equals(jbtnDefault))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
+			jbtnAcSave.requestFocus();
+		}		
+		else if((key.getSource().equals(jchkbxAuralion))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jchkbxAuralion.isSelected())){
+			jchkbxAuralion.setSelected(false);
+		}
+		else if((key.getSource().equals(jchkbxAuralion))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jchkbxAuralion.isSelected())){
+			jchkbxAuralion.setSelected(true);
+		}
+		else if((key.getSource().equals(jchkbxAuralion))&&(key.getKeyCode()==KeyEvent.VK_DOWN)){
+			jchkbxCyra.requestFocus();
+		}		
+		else if((key.getSource().equals(jchkbxCyra))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jchkbxCyra.isSelected())){
+			jchkbxCyra.setSelected(false);
+		}
+		else if((key.getSource().equals(jchkbxCyra))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jchkbxCyra.isSelected())){
+			jchkbxCyra.setSelected(true);
+		}
+		else if((key.getSource().equals(jchkbxCyra))&&(key.getKeyCode()==KeyEvent.VK_UP)){
+			jchkbxAuralion.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxCyra))&&(key.getKeyCode()==KeyEvent.VK_DOWN)){
+			jchkbxECoder.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxECoder))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jchkbxECoder.isSelected())){
+			jchkbxECoder.setSelected(false);
+			jchkbxEFSx.setSelected(false);
+			jrbtnBlRaw.setSelected(true);
+			jrbtnBlZero.setSelected(false);
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
+		}
+		else if((key.getSource().equals(jchkbxECoder))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jchkbxECoder.isSelected())){
+			jchkbxECoder.setSelected(true);
+		}
+		else if((key.getSource().equals(jchkbxECoder))&&(key.getKeyCode()==KeyEvent.VK_UP)){
+			jchkbxCyra.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxECoder))&&(key.getKeyCode()==KeyEvent.VK_DOWN)){
+			jchkbxEFSx.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxEFSx))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jchkbxEFSx.isSelected())){
+			jchkbxEFSx.setSelected(false);
+			jrbtnBlRaw.setSelected(true);
+			jrbtnBlZero.setSelected(false);
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
+		}
+		else if((key.getSource().equals(jchkbxEFSx))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jchkbxEFSx.isSelected())){
+			jchkbxEFSx.setSelected(true);
+			jchkbxECoder.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
+		}
+		else if((key.getSource().equals(jchkbxEFSx))&&(key.getKeyCode()==KeyEvent.VK_UP)){
+			jchkbxECoder.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxEFSx))&&(key.getKeyCode()==KeyEvent.VK_DOWN)){
+			jchkbxEndavor.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxEndavor))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jchkbxEndavor.isSelected())){
+			jchkbxEndavor.setSelected(false);
+		}
+		else if((key.getSource().equals(jchkbxEndavor))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jchkbxEndavor.isSelected())){
+			jchkbxEndavor.setSelected(true);
+			jchkbxHyperTHRONE.setSelected(true);
+		}
+		else if((key.getSource().equals(jchkbxEndavor))&&(key.getKeyCode()==KeyEvent.VK_UP)){
+			jchkbxEFSx.requestFocus();
+		}
+		else if((key.getSource().equals(jchkbxEndavor))&&(key.getKeyCode()==KeyEvent.VK_DOWN)){
+			jchkbxHyperTHRONE.requestFocus();
+		}		
+		else if((key.getSource().equals(jchkbxHyperTHRONE))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jchkbxHyperTHRONE.isSelected())){
+			jchkbxHyperTHRONE.setSelected(false);
+			jchkbxEndavor.setSelected(false);
+		}
+		else if((key.getSource().equals(jchkbxHyperTHRONE))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jchkbxHyperTHRONE.isSelected())){
+			jchkbxHyperTHRONE.setSelected(true);
+		}
+		else if((key.getSource().equals(jchkbxHyperTHRONE))&&(key.getKeyCode()==KeyEvent.VK_UP)){
+			jchkbxEndavor.requestFocus();
+		}
+		else if((key.getSource().equals(jrbtnSnsYes))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnSnsYes.isSelected())){
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);			
+			jchkbxECoder.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnSnsYes))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnSnsYes.isSelected())){
+			jrbtnSnsYes.setSelected(true);
+			jrbtnSnsNo.setSelected(false);
+			jchkbxECoder.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnSnsYes))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
+			jrbtnSnsNo.requestFocus();
+		}		
+		else if((key.getSource().equals(jrbtnSnsNo))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnSnsNo.isSelected())){
+			jrbtnSnsYes.setSelected(true);
+			jrbtnSnsNo.setSelected(false);
+		}
+		else if((key.getSource().equals(jrbtnSnsNo))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnSnsNo.isSelected())){
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnSnsNo))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
+			jrbtnSnsYes.requestFocus();
+		}
+		else if((key.getSource().equals(jrbtnSnsCYes))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnSnsCYes.isSelected())){
+			jrbtnSnsCYes.setSelected(false);
+			jrbtnSnsCNo.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnSnsCYes))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnSnsCYes.isSelected())){
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
+		}
+		else if((key.getSource().equals(jrbtnSnsCYes))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
+			jrbtnSnsCNo.requestFocus();
+		}		
+		else if((key.getSource().equals(jrbtnSnsCNo))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnSnsCNo.isSelected())){
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);		
+			jchkbxECoder.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnSnsCNo))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnSnsCNo.isSelected())){
+			jrbtnSnsCYes.setSelected(false);
+			jrbtnSnsCNo.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+			jchkbxECoder.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnSnsCNo))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
+			jrbtnSnsCYes.requestFocus();
+		}
+		else if((key.getSource().equals(jrbtnBlRaw))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnBlRaw.isSelected())){
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);	
+			jchkbxECoder.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnBlRaw))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnBlRaw.isSelected())){
+			jrbtnBlRaw.setSelected(true);
+			jrbtnBlZero.setSelected(false);
+			jchkbxEFSx.setSelected(false);
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnBlRaw))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
+			jrbtnBlZero.requestFocus();
+		}		
+		else if((key.getSource().equals(jrbtnBlZero))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnBlZero.isSelected())){
+			jrbtnBlRaw.setSelected(true);
+			jrbtnBlZero.setSelected(false);
+			jchkbxEFSx.setSelected(false);
+		}
+		else if((key.getSource().equals(jrbtnBlZero))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnBlZero.isSelected())){
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
+			jchkbxECoder.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnBlZero))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
+			jrbtnBlRaw.requestFocus();
+		}
+		else if((key.getSource().equals(jrbtnLngE))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnLngE.isSelected())){
+			jrbtnLngE.setSelected(false);
+			jrbtnLngG.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnLngE))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnLngE.isSelected())){
+			jrbtnLngE.setSelected(true);
+			jrbtnLngG.setSelected(false);
+		}
+		else if((key.getSource().equals(jrbtnLngE))&&(key.getKeyCode()==KeyEvent.VK_RIGHT)){
+			jrbtnLngG.requestFocus();
+		}		
+		else if((key.getSource().equals(jrbtnLngG))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(jrbtnLngG.isSelected())){
+			jrbtnLngE.setSelected(true);
+			jrbtnLngG.setSelected(false);
+		}
+		else if((key.getSource().equals(jrbtnLngG))&&(key.getKeyCode()==KeyEvent.VK_ENTER)&&(!jrbtnLngG.isSelected())){
+			jrbtnLngE.setSelected(false);
+			jrbtnLngG.setSelected(true);
+		}
+		else if((key.getSource().equals(jrbtnLngG))&&(key.getKeyCode()==KeyEvent.VK_LEFT)){
+			jrbtnLngE.requestFocus();
 		}
 	}
 
@@ -194,10 +469,18 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 			jchkbxEFSx.setSelected(false);
 			jrbtnBlRaw.setSelected(true);
 			jrbtnBlZero.setSelected(false);
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
 		}
 		else if((mouse.getSource().equals(jchkbxEFSx))&&(!jchkbxEFSx.isSelected())){
 			jrbtnBlRaw.setSelected(true);
 			jrbtnBlZero.setSelected(false);
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
 		}
 		else if((mouse.getSource().equals(jchkbxEFSx))&&(jchkbxEFSx.isSelected())){
 			jchkbxECoder.setSelected(true);
@@ -207,16 +490,23 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		else if((mouse.getSource().equals(jrbtnBlZero))&&(!jrbtnBlZero.isSelected())){
 			jrbtnBlRaw.setSelected(true);
 			jrbtnBlZero.setSelected(false);
+			jchkbxEFSx.setSelected(false);
+			jrbtnSnsYes.setSelected(false);
+			jrbtnSnsNo.setSelected(true);
+			jrbtnSnsCYes.setSelected(true);
+			jrbtnSnsCNo.setSelected(false);
 		}
 		else if((mouse.getSource().equals(jrbtnBlZero))&&(jrbtnBlZero.isSelected())){
 			jrbtnBlRaw.setSelected(false);
 			jrbtnBlZero.setSelected(true);
 			jchkbxEFSx.setSelected(true);
-			jchkbxECoder.setSelected(true);
+			jchkbxECoder.setSelected(true);			
 		}
 		else if((mouse.getSource().equals(jrbtnBlRaw))&&(!jrbtnBlRaw.isSelected())){
 			jrbtnBlRaw.setSelected(false);
 			jrbtnBlZero.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+			jchkbxECoder.setSelected(true);
 		}
 		else if((mouse.getSource().equals(jrbtnBlRaw))&&(jrbtnBlRaw.isSelected())){
 			jrbtnBlRaw.setSelected(true);
@@ -250,6 +540,10 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		else if((mouse.getSource().equals(jrbtnSnsYes))&&(jrbtnSnsYes.isSelected())){
 			jrbtnSnsYes.setSelected(true);
 			jrbtnSnsNo.setSelected(false);
+			jchkbxEFSx.setSelected(true);
+			jchkbxECoder.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
 		}
 		else if((mouse.getSource().equals(jrbtnSnsYes))&&(!jrbtnSnsYes.isSelected())){
 			jrbtnSnsYes.setSelected(false);
@@ -274,6 +568,10 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		else if((mouse.getSource().equals(jrbtnSnsCNo))&&(jrbtnSnsCNo.isSelected())){
 			jrbtnSnsCYes.setSelected(false);
 			jrbtnSnsCNo.setSelected(true);
+			jchkbxEFSx.setSelected(true);
+			jchkbxECoder.setSelected(true);
+			jrbtnBlRaw.setSelected(false);
+			jrbtnBlZero.setSelected(true);
 		}
 		else if((mouse.getSource().equals(jrbtnSnsCNo))&&(!jrbtnSnsCNo.isSelected())){
 			jrbtnSnsCYes.setSelected(true);
@@ -456,27 +754,19 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		jbtnAccept.setLocation(Integer.parseInt(getParameter("btnaxpos")), Integer.parseInt(getParameter("btnaypos")));
 		jbtnAccept.setSize(90, 22);
 		jbtnAccept.setText(getParameter("btnaname"));
-		jbtnAccept.addKeyListener(this);
-		jbtnAccept.addMouseListener(this);
 		jbtnAccept.requestFocus();
 		
 		jbtnAcSave.setLocation(Integer.parseInt(getParameter("btnasxpos")), Integer.parseInt(getParameter("btnasypos")));
 		jbtnAcSave.setSize(100, 22);	
 		jbtnAcSave.setText(getParameter("btnasname"));
-		jbtnAcSave.addKeyListener(this);
-		jbtnAcSave.addMouseListener(this);
 		
 		jbtnExit.setLocation(Integer.parseInt(getParameter("btnexpos")), Integer.parseInt(getParameter("btneypos")));
 		jbtnExit.setSize(90, 22);
 		jbtnExit.setText(getParameter("btnename"));
-		jbtnExit.addKeyListener(this);
-		jbtnExit.addMouseListener(this);
 		
 		jbtnDefault.setLocation(Integer.parseInt(getParameter("btndefxpos")), Integer.parseInt(getParameter("btndefypos")));
 		jbtnDefault.setSize(90, 22);	
 		jbtnDefault.setText(getParameter("btndefname"));
-		jbtnDefault.addKeyListener(this);
-		jbtnDefault.addMouseListener(this);
 		
 		jlblMdls.setLocation(Integer.parseInt(getParameter("mdlsxpos"))+15, Integer.parseInt(getParameter("mdlsypos"))+10);
 		jlblMdls.setSize(Integer.parseInt(getParameter("mdlsxsiz")), Integer.parseInt(getParameter("fsize")));		
@@ -485,38 +775,26 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		jchkbxAuralion.setLocation(Integer.parseInt(getParameter("mdlsAurxpos")), Integer.parseInt(getParameter("mdlsAurypos")));
 		jchkbxAuralion.setSize(Integer.parseInt(getParameter("mdlsAurxsiz")), Integer.parseInt(getParameter("mdlsAurysiz")));
 		jchkbxAuralion.setText(getParameter("mdlsAurtxt"));
-		jchkbxAuralion.addKeyListener(this);
-		jchkbxAuralion.addMouseListener(this);
 		
 		jchkbxCyra.setLocation(Integer.parseInt(getParameter("mdlsCyxpos")), Integer.parseInt(getParameter("mdlsCyypos")));
 		jchkbxCyra.setSize(Integer.parseInt(getParameter("mdlsCyxsiz")), Integer.parseInt(getParameter("mdlsCyysiz")));
 		jchkbxCyra.setText(getParameter("mdlsCytxt"));
-		jchkbxCyra.addKeyListener(this);
-		jchkbxCyra.addMouseListener(this);
 		
 		jchkbxECoder.setLocation(Integer.parseInt(getParameter("mdlsEcxpos")), Integer.parseInt(getParameter("mdlsEcypos")));
 		jchkbxECoder.setSize(Integer.parseInt(getParameter("mdlsEcxsiz")), Integer.parseInt(getParameter("mdlsEcysiz")));
 		jchkbxECoder.setText(getParameter("mdlsEctxt"));
-		jchkbxECoder.addKeyListener(this);
-		jchkbxECoder.addMouseListener(this);
 		
 		jchkbxEFSx.setLocation(Integer.parseInt(getParameter("mdlsEfsxxpos")), Integer.parseInt(getParameter("mdlsEfsxypos")));
 		jchkbxEFSx.setSize(Integer.parseInt(getParameter("mdlsEfsxxsiz")), Integer.parseInt(getParameter("mdlsEfsxysiz")));
 		jchkbxEFSx.setText(getParameter("mdlsEfsxtxt"));
-		jchkbxEFSx.addKeyListener(this);
-		jchkbxEFSx.addMouseListener(this);
 		
 		jchkbxEndavor.setLocation(Integer.parseInt(getParameter("mdlsEndxpos")), Integer.parseInt(getParameter("mdlsEndypos")));
 		jchkbxEndavor.setSize(Integer.parseInt(getParameter("mdlsEndxsiz")), Integer.parseInt(getParameter("mdlsEndysiz")));
 		jchkbxEndavor.setText(getParameter("mdlsEndtxt"));
-		jchkbxEndavor.addKeyListener(this);
-		jchkbxEndavor.addMouseListener(this);
 		
 		jchkbxHyperTHRONE.setLocation(Integer.parseInt(getParameter("mdlsHTexpos")), Integer.parseInt(getParameter("mdlsHTeypos")));
 		jchkbxHyperTHRONE.setSize(Integer.parseInt(getParameter("mdlsHTexsiz")), Integer.parseInt(getParameter("mdlsHTeysiz")));
 		jchkbxHyperTHRONE.setText(getParameter("mdlsHTetxt"));
-		jchkbxHyperTHRONE.addKeyListener(this);
-		jchkbxHyperTHRONE.addMouseListener(this);
 		
 		jlblSns.setLocation(Integer.parseInt(getParameter("snsxpos"))+15, Integer.parseInt(getParameter("snsypos"))+10);
 		jlblSns.setSize(Integer.parseInt(getParameter("snsxsiz")), Integer.parseInt(getParameter("fsize")));		
@@ -525,14 +803,10 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		jrbtnSnsYes.setLocation(Integer.parseInt(getParameter("snsYesxpos")), Integer.parseInt(getParameter("snsYesypos")));
 		jrbtnSnsYes.setSize(Integer.parseInt(getParameter("snsYesxsiz")), Integer.parseInt(getParameter("snsYesysiz")));
 		jrbtnSnsYes.setText(getParameter("snsYestxt"));
-		jrbtnSnsYes.addKeyListener(this);
-		jrbtnSnsYes.addMouseListener(this);
 		
 		jrbtnSnsNo.setLocation(Integer.parseInt(getParameter("snsNoxpos")), Integer.parseInt(getParameter("snsNoypos")));
 		jrbtnSnsNo.setSize(Integer.parseInt(getParameter("snsNoxsiz")), Integer.parseInt(getParameter("snsNoysiz")));
 		jrbtnSnsNo.setText(getParameter("snsNotxt"));
-		jrbtnSnsNo.addKeyListener(this);
-		jrbtnSnsNo.addMouseListener(this);
 		
 		jlblSnsC.setLocation(Integer.parseInt(getParameter("snsCxpos"))+15, Integer.parseInt(getParameter("snsCypos"))+10);
 		jlblSnsC.setSize(Integer.parseInt(getParameter("snsCxsiz")), Integer.parseInt(getParameter("fsize")));		
@@ -541,14 +815,10 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		jrbtnSnsCYes.setLocation(Integer.parseInt(getParameter("snsCYesxpos")), Integer.parseInt(getParameter("snsCYesypos")));
 		jrbtnSnsCYes.setSize(Integer.parseInt(getParameter("snsCYesxsiz")), Integer.parseInt(getParameter("snsCYesysiz")));
 		jrbtnSnsCYes.setText(getParameter("snsCYestxt"));
-		jrbtnSnsCYes.addKeyListener(this);
-		jrbtnSnsCYes.addMouseListener(this);
 		
 		jrbtnSnsCNo.setLocation(Integer.parseInt(getParameter("snsCNoxpos")), Integer.parseInt(getParameter("snsCNoypos")));
 		jrbtnSnsCNo.setSize(Integer.parseInt(getParameter("snsCNoxsiz")), Integer.parseInt(getParameter("snsCNoysiz")));
 		jrbtnSnsCNo.setText(getParameter("snsCNotxt"));
-		jrbtnSnsCNo.addKeyListener(this);
-		jrbtnSnsCNo.addMouseListener(this);
 		
 		jlblBl.setLocation(Integer.parseInt(getParameter("blxpos"))+15, Integer.parseInt(getParameter("blypos"))+10);
 		jlblBl.setSize(Integer.parseInt(getParameter("blxsiz")), Integer.parseInt(getParameter("fsize")));		
@@ -557,14 +827,10 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		jrbtnBlRaw.setLocation(Integer.parseInt(getParameter("blRawxpos")), Integer.parseInt(getParameter("blRawypos")));
 		jrbtnBlRaw.setSize(Integer.parseInt(getParameter("blRawxsiz")), Integer.parseInt(getParameter("blRawysiz")));
 		jrbtnBlRaw.setText(getParameter("blRawtxt"));
-		jrbtnBlRaw.addKeyListener(this);
-		jrbtnBlRaw.addMouseListener(this);
 		
 		jrbtnBlZero.setLocation(Integer.parseInt(getParameter("blZeroxpos")), Integer.parseInt(getParameter("blZeroypos")));
 		jrbtnBlZero.setSize(Integer.parseInt(getParameter("blZeroxsiz")), Integer.parseInt(getParameter("blZeroysiz")));
 		jrbtnBlZero.setText(getParameter("blZerotxt"));
-		jrbtnBlZero.addKeyListener(this);
-		jrbtnBlZero.addMouseListener(this);
 		
 		jlblLng.setLocation(Integer.parseInt(getParameter("lngxpos"))+15, Integer.parseInt(getParameter("lngypos"))+10);
 		jlblLng.setSize(Integer.parseInt(getParameter("lngxsiz")), Integer.parseInt(getParameter("fsize")));		
@@ -573,14 +839,10 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 		jrbtnLngE.setLocation(Integer.parseInt(getParameter("lngExpos")), Integer.parseInt(getParameter("lngEypos")));
 		jrbtnLngE.setSize(Integer.parseInt(getParameter("lngExsiz")), Integer.parseInt(getParameter("lngEysiz")));
 		jrbtnLngE.setText(getParameter("lngEtxt"));
-		jrbtnLngE.addKeyListener(this);
-		jrbtnLngE.addMouseListener(this);
 		
 		jrbtnLngG.setLocation(Integer.parseInt(getParameter("lngGxpos")), Integer.parseInt(getParameter("lngGypos")));
 		jrbtnLngG.setSize(Integer.parseInt(getParameter("lngGxsiz")), Integer.parseInt(getParameter("lngGysiz")));
 		jrbtnLngG.setText(getParameter("lngGtxt"));
-		jrbtnLngG.addKeyListener(this);
-		jrbtnLngG.addMouseListener(this);
 	}	
 	
 	private class Jpnl extends JPanel {
@@ -612,6 +874,8 @@ public class BootSetup extends JDialog implements KeyListener, MouseListener {
 			g.drawRect(Integer.parseInt(getParameter("msgxpos")), Integer.parseInt(getParameter("msgypos")), Integer.parseInt(getParameter("msgxsiz")), Integer.parseInt(getParameter("msgysiz")));
 		
 			g.drawString(getParameter(msg), Integer.parseInt(getParameter("msgxpos"))+10, Integer.parseInt(getParameter("msgypos"))+15);
+		
+			jbtnAccept.requestFocus();
 		}
 	}
 	

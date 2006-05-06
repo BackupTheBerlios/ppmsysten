@@ -17,7 +17,6 @@ import visual.boot.BootFrm;
 import visual.boot.BootScreen;
 import visual.boot.BootSetup;
 import visual.efsx.OpenDlg;
-import runtimes.shutdown.*;
 
 public class Boot {
 	
@@ -131,8 +130,6 @@ public class Boot {
 			bf.setFullPos(20);		
 			
 			Thread.sleep(200);
-			
-			new Shutdown().setRestart();
 			
 			if(sl.getBootLvl()!=-1){
 				if(sl.getSettings().get(3).equals("1")){

@@ -4,12 +4,12 @@ package runtimes.boot;
 import runtimes.loader06.OsSupport;
 import runtimes.loader06.SystenProp;
 import moduls.jcorex32.ci.Ci;
+import moduls.jcorex32.lib.AuralionLib;
+import moduls.jcorex32.lib.CyraLib;
+import moduls.jcorex32.lib.HyperTHRONELib;
 import moduls.jcorex32.lib.JavaLib;
+import moduls.jcorex32.lib.MasterOSLib;
 import moduls.jcorex32.lib.SystenLib;
-import moduls.jcorex32.lib.windows.AuralionWinLib;
-import moduls.jcorex32.lib.windows.CyraWinLib;
-import moduls.jcorex32.lib.windows.HyperTHRONEWinLib;
-import moduls.jcorex32.lib.windows.MainWinLib;
 import moduls.loader06.ErrorCode;
 import moduls.loader06.windows.CheckWinLib;
 import moduls.log.Log;
@@ -93,10 +93,10 @@ public class BootOne {
 			Thread.sleep(150);
 			
 			if(os.toLowerCase().contains("windows")){
-				MainWinLib 			mwl=new MainWinLib();
-				AuralionWinLib 		awl=new AuralionWinLib();
-				CyraWinLib			cwl=new CyraWinLib();
-				HyperTHRONEWinLib 	htwl=new HyperTHRONEWinLib();
+				MasterOSLib 			mwl=new MasterOSLib();
+				AuralionLib 		awl=new AuralionLib();
+				CyraLib			cwl=new CyraLib();
+				HyperTHRONELib 	htwl=new HyperTHRONELib();
 				CheckWinLib			chwl=new CheckWinLib();
 				
 				bf.setTxt("##l"+ci.getGlobalMod(2)+" "+ci.getTxt("027"));

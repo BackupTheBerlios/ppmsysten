@@ -11,10 +11,10 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
+import moduls.jcorex32.lib.HyperTHRONELib;
 import moduls.jcorex32.lib.JavaLib;
+import moduls.jcorex32.lib.MasterOSLib;
 import moduls.jcorex32.lib.SystenLib;
-import moduls.jcorex32.lib.windows.HyperTHRONEWinLib;
-import moduls.jcorex32.lib.windows.MainWinLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
@@ -42,7 +42,7 @@ public class CheckWinLib {
 	}
 	
 	public void checkHyperTHRONE(){
-		HyperTHRONEWinLib htwl=new HyperTHRONEWinLib();
+		HyperTHRONELib htwl=new HyperTHRONELib();
 		
 		Dimension d=Toolkit.getDefaultToolkit().getScreenSize();
 		
@@ -80,7 +80,7 @@ public class CheckWinLib {
 	public void checkWinLib(){
 		Properties 	OS=new Properties();
 		SystenLib 	sl=new SystenLib();
-		MainWinLib	mwl=new MainWinLib();
+		MasterOSLib	mwl=new MasterOSLib();
 		JavaLib		jl=new JavaLib();
 		
 		try {

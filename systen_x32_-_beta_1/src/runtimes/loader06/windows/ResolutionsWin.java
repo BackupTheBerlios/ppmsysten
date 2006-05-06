@@ -8,8 +8,8 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
+import moduls.jcorex32.lib.HyperTHRONELib;
 import moduls.jcorex32.lib.SystenLib;
-import moduls.jcorex32.lib.windows.HyperTHRONEWinLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
@@ -17,7 +17,7 @@ public class ResolutionsWin extends Thread {
 	
 	public void run(){
 		Properties 			RN=new Properties();
-		HyperTHRONEWinLib 	htwl=new HyperTHRONEWinLib();
+		HyperTHRONELib 	htwl=new HyperTHRONELib();
 		SystenLib			sl=new SystenLib();
 		Log					l=new Log();
 

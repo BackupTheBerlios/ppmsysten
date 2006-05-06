@@ -27,11 +27,6 @@ x86windows_xp_professional_x64_edition_windows_nt=5.2
 x86windows_xp_professional_x64_edition_windows_nt5.2=Windows_XP_Professional_x64_Edition
 x86upx=Service Pack 1oh
 
-amd64x=windows_xp_professional_x64_edition_windows_nt
-amd64windows_xp_professional_x64_edition_windows_nt=5.2
-amd64windows_xp_professional_x64_edition_windows_nt5.2=Windows_XP_Professional_x64_Edition
-amd64upx=Service Pack 1oh
-
 # LINUX OS COMPATIBILITY PART #######################################################
 
 i386=linux

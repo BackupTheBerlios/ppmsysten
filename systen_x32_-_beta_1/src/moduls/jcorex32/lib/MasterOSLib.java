@@ -1,5 +1,5 @@
 
-package moduls.jcorex32.lib.windows;
+package moduls.jcorex32.lib;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -11,12 +11,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import moduls.jcorex32.ecoderx32.ECoder;
-import moduls.jcorex32.lib.SystenLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 import runtimes.shutdown.Shutdown;
 
-public class MainWinLib {
+public class MasterOSLib {
 	
 	private static String systemDrive="";
 	
