@@ -271,6 +271,8 @@ public class BootZero {
 				
 				Thread.sleep(150);
 				
+				sl.setMasterOs(1, "Linux");
+				
 				bf.setTxt("##l"+ci.getGlobalMod(3)+" "+ci.getTxt("016"));
 				bf.setFullPos(86);			
 				bf.setTxt("##m"+sl.getMasterOs(1).replace("_", " ")+"##n");

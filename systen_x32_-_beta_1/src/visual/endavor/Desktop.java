@@ -17,6 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import moduls.jcorex32.lib.SystenLib;
+import moduls.jcorex32.lib.linux.HyperTHRONELinLib;
 import moduls.jcorex32.lib.windows.HyperTHRONEWinLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
@@ -52,12 +53,15 @@ public class Desktop extends JFrame implements MouseListener {
 			x=htwl.getCurrentMode(0);
 			y=htwl.getCurrentMode(1);
 		}
-/*		else if(sl.getOsType()==1){
+		else if(sl.getOsType()==1){
 			HyperTHRONELinLib htwl=new HyperTHRONELinLib();
 			
-			x=setSize(htll.getCurrentMode(0);
-			y=htll.getCurrentMode(1);
-		}*/	
+			x=1280;
+			y=1024;
+			
+//			x=setSize(htll.getCurrentMode(0);
+//			y=htll.getCurrentMode(1);
+		}
 		
 		setSize(x, y);
 		setAlwaysOnTop(true);
@@ -106,7 +110,7 @@ public class Desktop extends JFrame implements MouseListener {
 			
 			txt=txt.replace("V", new SystenLib().getVersion());
 			txt=txt.replace("!", new SystenLib().getAuralion(1));
-			txt=txt.replace("§", new SystenLib().getCyra(1));
+			txt=txt.replace("ï¿½", new SystenLib().getCyra(1));
 			txt=txt.replace("%", new SystenLib().getEFSx(1));
 			txt=txt.replace("&", new SystenLib().getEndavor(1));			
 			txt=txt.replace("?", new SystenLib().getCi(1));

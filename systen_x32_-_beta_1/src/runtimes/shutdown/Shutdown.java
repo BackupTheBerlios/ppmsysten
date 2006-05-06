@@ -50,11 +50,13 @@ public class Shutdown {
 		}
 		
 		try {
-			if(sl.getOsType()==0){
-				Runtime.getRuntime().exec("cmd.exe /c del efsx\\"+sl.getCurSession(0)+"*.*");
-			}
-			else {
-				// LINUX delete
+			if(sl.getCurSessionClose()){
+				if((sl.getOsType()==0)&&(sl.getCurSessionClose())){
+					Runtime.getRuntime().exec("cmd.exe /c del efsx\\"+sl.getCurSession(0)+"*.*");
+				}
+				else if(sl.getOsType()==1){
+					// LINUX delete
+				}
 			}
 		}
 		catch(IOException ioe){
@@ -101,14 +103,21 @@ public class Shutdown {
 		}
 		
 		try {
-			if(sl.getOsType()==0){
-				Runtime.getRuntime().exec("cmd.exe /c del efsx\\"+sl.getCurSession(0)+"*.*");
-			}
-			else {
-				// LINUX delete
+			if(sl.getCurSessionClose()){
+				if((sl.getOsType()==0)&&(sl.getCurSessionClose())){
+					Runtime.getRuntime().exec("cmd.exe /c del efsx\\"+sl.getCurSession(0)+"*.*");
+				}
+				else if(sl.getOsType()==1){
+					// LINUX delete
+				}
 			}
 			
-			Runtime.getRuntime().exec(sl.getLaParam3()+" "+sl.getLaParam1()+" "+sl.getLaParam2()+" "+sl.getLaParam3());
+			if(sl.getOsType()==0){
+				Runtime.getRuntime().exec(sl.getLaParam3()+" "+sl.getLaParam1()+" "+sl.getLaParam2()+" "+sl.getLaParam3());
+			}
+			else if(sl.getOsType()==1){
+				Runtime.getRuntime().exec("./"+sl.getLaParam3()+" "+sl.getLaParam1()+" "+sl.getLaParam2()+" "+sl.getLaParam3());
+			}
 		}
 		catch(IOException ioe){
 			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("0"), 0);
