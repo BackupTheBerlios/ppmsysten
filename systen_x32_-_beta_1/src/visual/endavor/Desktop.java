@@ -48,8 +48,10 @@ public class Desktop extends JFrame implements MouseListener {
 		
 		HyperTHRONELib htel=new HyperTHRONELib();
 			
-		x=htel.getCurrentMode(0);
-		y=htel.getCurrentMode(1);
+/*		x=htel.getCurrentMode(0);
+		y=htel.getCurrentMode(1);*/
+		x=1280;
+		y=1024;
 		
 		setSize(x, y);
 		setAlwaysOnTop(true);
@@ -98,7 +100,7 @@ public class Desktop extends JFrame implements MouseListener {
 			
 			txt=txt.replace("V", new SystenLib().getVersion());
 			txt=txt.replace("!", new SystenLib().getAuralion(1));
-			txt=txt.replace("§", new SystenLib().getCyra(1));
+			txt=txt.replace("ï¿½", new SystenLib().getCyra(1));
 			txt=txt.replace("%", new SystenLib().getEFSx(1));
 			txt=txt.replace("&", new SystenLib().getEndavor(1));			
 			txt=txt.replace("?", new SystenLib().getCi(1));
