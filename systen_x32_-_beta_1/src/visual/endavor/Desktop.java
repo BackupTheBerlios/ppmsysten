@@ -2,8 +2,10 @@
 package visual.endavor;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.FileInputStream;
@@ -34,24 +36,27 @@ public class Desktop extends JFrame implements MouseListener {
 	public void loadDesktop(){
 		SystenLib sl=new SystenLib();
 		
-		if((new SystenLib().getHyperTHRONE(0).equals("n/a"))||
+/*		if((new SystenLib().getHyperTHRONE(0).equals("n/a"))||
 				(new SystenLib().getHyperTHRONE(1).equals("n/a"))||
 				(new SystenLib().getEndavor(0).equals("n/a"))||
 				(new SystenLib().getEndavor(1).equals("n/a"))){
 			
 			// CI operation-console: not implemented now				
 			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-68"), -68);
-		}
+		}*/
 		
 		setTitle(getParameter("name"));
 		setLocation(Integer.parseInt(getParameter("xloc")), Integer.parseInt(getParameter("yloc")));
 		
-		HyperTHRONELib htel=new HyperTHRONELib();
+/*		HyperTHRONELib htel=new HyperTHRONELib();
 			
-/*		x=htel.getCurrentMode(0);
+		x=htel.getCurrentMode(0);
 		y=htel.getCurrentMode(1);*/
-		x=1280;
-		y=1024;
+		
+		Dimension d=Toolkit.getDefaultToolkit().getScreenSize();
+		
+		x=(int)d.getWidth();
+		y=(int)d.getHeight();
 		
 		setSize(x, y);
 		setAlwaysOnTop(true);
@@ -100,7 +105,7 @@ public class Desktop extends JFrame implements MouseListener {
 			
 			txt=txt.replace("V", new SystenLib().getVersion());
 			txt=txt.replace("!", new SystenLib().getAuralion(1));
-			txt=txt.replace("ï¿½", new SystenLib().getCyra(1));
+			txt=txt.replace("§", new SystenLib().getCyra(1));
 			txt=txt.replace("%", new SystenLib().getEFSx(1));
 			txt=txt.replace("&", new SystenLib().getEndavor(1));			
 			txt=txt.replace("?", new SystenLib().getCi(1));

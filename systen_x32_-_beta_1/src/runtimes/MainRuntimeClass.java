@@ -1,7 +1,6 @@
 
 package runtimes;
 
-import moduls.jcorex32.lib.SystenLib;
 import moduls.loader06.ErrorCode;
 import moduls.log.Log;
 
@@ -16,7 +15,10 @@ public class MainRuntimeClass {
 		PropertyConfigurator.configure("conf/log4j.properties");
 		
 		if(args.length!=0){
-			new Boot().loadLevel(args);
+//			new Boot().loadLevel(args);
+			
+			// diese Methode wird in Boot() geladen, hier nur zur schnelleren Bearbeitung
+			new ErrorCode().loadErrorCode();
 			
 			System.gc();
 			
