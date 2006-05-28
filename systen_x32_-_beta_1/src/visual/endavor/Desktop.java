@@ -45,6 +45,8 @@ public class Desktop extends JFrame implements MouseListener {
 			new Log().log(this.getClass().getName(), new ErrorCode().getErrorCode("-68"), -68);
 		}*/
 		
+		// Test
+		
 		setTitle(getParameter("name"));
 		setLocation(Integer.parseInt(getParameter("xloc")), Integer.parseInt(getParameter("yloc")));
 		
